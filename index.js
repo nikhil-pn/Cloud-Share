@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 const { fetchAndDeleteData } = require("./services/fileCleaner");
 
 const filesRoutes = require("./routes/filesRoutes");
+const pageRoutes = require("./routes/pagesRoutes");
 
 require("dotenv").config();
 
@@ -25,11 +26,15 @@ app.get("/", (req, res) => {
   res.sendFile("index.html", { root: path.join(__dirname, "public") });
 });
 app.use("api/v1/files", filesRoutes);
-app.use("/api/v1/pages");
+app.use("/api/v1/pages", pageRoutes);
 
 //sending 404 error if page not found, please not when using 404 use middle at last
 app.all("*", (req, res) => {
   return res
     .status(404)
     .sendFile("404.html", { root: path.join(__dirname, "public") });
+});
+
+app.listen(PORT, () => {
+  console.log("Server is Running at PORT ", PORT);
 });
