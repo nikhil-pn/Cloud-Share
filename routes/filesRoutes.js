@@ -4,7 +4,7 @@ const upload = require("../config/fileUpload");
 const { v4: uuidv4 } = require("uuid");
 const File = require("../models/file");
 const sendEmail = require("../services/email");
-const emailTemplate = require("../utils/emailTemplate");
+const emailTemplate = require("../utilis/emailTemplate");
 const BASE_URL = process.env.BASE_URL;
 
 router.post("/upload", (req, res) => {
