@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const MONGO_DB_URL = process.env.MONGO_DB_URL;
+mongoose.set("strictQuery", true);
+
 const MONGO_OPTIONS = {
-  useNewUrlParser: true,
-  useUnifiedTopplogy: true,
+  useNewUrlParser: false,
 };
 
 const connectDB = async () => {
