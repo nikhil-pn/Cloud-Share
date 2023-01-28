@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const fileShema = new Schema(
+const fileSchema = new Schema(
   {
     fileName: {
       type: String,
@@ -12,21 +12,23 @@ const fileShema = new Schema(
       required: true,
     },
     size: {
+      type: Number,
+      required: true,
+    },
+    uuid: {
       type: String,
       required: true,
     },
     sender: {
       type: String,
-      required: true,
+      required: false,
     },
     receiver: {
       type: String,
-      required: true,
+      required: false,
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-module.exports = mongoose.model("file", fileShema);
+module.exports = mongoose.model("file", fileSchema);

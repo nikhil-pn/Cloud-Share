@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const File = require("../models/file");
 require("dotenv").config();
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = process.env.APP_BASE_URL;
 
 router.get("/download-page/:uuid", async (req, res) => {
   try {

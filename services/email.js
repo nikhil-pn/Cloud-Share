@@ -5,27 +5,23 @@ const USER = process.env.MAIL_USER;
 const PASSWORD = process.env.MAIL_PASSWORD;
 
 const sendEmail = async ({ from, to, subject, text, html }) => {
-  try {
-    let transporter = mailer.createTransport({
-      host: HOST,
-      port: PORT,
-      secure: false,
-      auth: {
-        user: USER,
-        pass: PASSWORD,
-      },
-    });
+  let transporter = mailer.createTransport({
+    host: HOST,
+    port: PORT,
+    secure: false,
+    auth: {
+      user: USER,
+      pass: PASSWORD,
+    },
+  });
 
-    let info = await transporter.sendMail({
-      from: `CloudShare <${from}>`,
-      to,
-      subject,
-      text,
-      html,
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  let info = await transporter.sendMail({
+    from: `ShareEazy <${from}>`,
+    to: to,
+    subject: subject,
+    text: text,
+    html: html,
+  });
 };
 
-module.exports = { sendEmail };
+module.exports = sendEmail;

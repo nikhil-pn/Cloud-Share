@@ -102,6 +102,7 @@ const updateProgress = (e) => {
 };
 
 const onUploadSuccess = ({ file: url }) => {
+	console.log("reeached here");
 	console.log(url);
 	resetFileInput();
 	emailForm[2].removeAttribute("disabled");

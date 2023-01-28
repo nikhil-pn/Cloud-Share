@@ -1,18 +1,20 @@
 const multer = require("multer");
+const path = require("path")
 
-//storing the files inside multer with appending currrent date
+// storing the files inside multer with appending currrent date
 let fileStorage = multer.diskStorage({
-  destination: (req, file, cb) => (null, "uploads/"),
-  filename: (req, file, cb) => {
-    const uniquieName = `${Date.now()}-${Math.round(
+  destination: (_req, _file, cb) => cb(null, "uploads/"),
+  filename: (_req, file, cb) => {
+    const uniqueName = `${Date.now()}-${Math.round(
       Math.random() * 1e9
     )}${path.extname(file.originalname)}`;
-    cb(null, uniquieName);
+    cb(null, uniqueName);
   },
 });
+
 let upload = multer({
   storage: fileStorage,
-  limits: { fileSize: 10 ** 7 },
+  limit: { fileSize: 10 ** 7 },
 }).single("uploadedFile");
 
 module.exports = upload;
