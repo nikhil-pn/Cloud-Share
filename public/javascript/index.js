@@ -109,7 +109,7 @@ const onUploadSuccess = ({ file: url }) => {
   progressContainer.style.display = "none";
   sharingContainer.style.display = "block";
   const urlShrink = url.substring(10, url.length);
-  fileURLInput.value = "https://cloud-share.nikhilpn1.repl.co/" + urlShrink;
+  fileURLInput.value = "https://cloudshare.onrender.com/" + urlShrink;
 };
 
 const resetFileInput = () => {
