@@ -110,7 +110,7 @@ const onUploadSuccess = ({ file: url }) => {
 	sharingContainer.style.display = "block";
   const urlShrink = url.substring(10, url.length)
 	// fileURLInput.value = "https://cloud-share.nikhilpn1.repl.co/" + urlShrink;
-	fileURLInput.value = "HELLLO";
+	fileURLInput.value = url;
 };
 
 const resetFileInput = () => {
