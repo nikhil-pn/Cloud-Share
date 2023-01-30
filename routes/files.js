@@ -4,8 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 const File = require("../models/file");
 const sendEmail = require("../services/email");
 const emailTemplate = require("../utils/emailTemplate");
-// const BASE_URL = process.env.APP_BASE_URL;
-const BASE_URL = "https://cloudshare.onrender.com";
+const BASE_URL = process.env.APP_BASE_URL;
 
 
 //* @METHOD: POST
