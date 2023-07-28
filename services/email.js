@@ -16,7 +16,7 @@ const sendEmail = async ({ from, to, subject, text, html }) => {
   });
 
   let info = await transporter.sendMail({
-    from: `ShareEazy <${from}>`,
+    from: `CloudShare <${from}>`,
     to: to,
     subject: subject,
     text: text,

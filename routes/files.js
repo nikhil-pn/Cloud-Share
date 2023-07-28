@@ -62,12 +62,7 @@ router.post("/send", async (req, res) => {
     }
 
     const foundFile = await File.findOne({ uuid });
-    // if (foundFile.receiver === receiversEmail) {
-    //   return res.status(405).send({
-    //     error: "Email already send",
-    //   });
-    // }
-
+    
     foundFile.sender = sendersEmail;
     foundFile.receiver = receiversEmail;
 

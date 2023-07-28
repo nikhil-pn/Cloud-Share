@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+//defining schema
 const fileSchema = new Schema(
   {
     fileName: {
