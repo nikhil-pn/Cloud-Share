@@ -56,17 +56,17 @@
 ### :camera: Screenshots
 
 <div align="center" display='flex'>
-<img width='400rem'  src='https://github.com/nikhil-pn/Cloud-Share/blob/main/demo/homescreen.jpeg' alt='image'/>
+<img width='400rem'  src='https://github.com/nikhil-pn/Cloud-Share/blob/main/public/images/cloudshare-screenshot.png' alt='image'/>
 </div>
 
 
 
 <div align="center" display='flex'>
 
-<img width='600rem'   src='https://github.com/nikhil-pn/Cloud-Share/blob/main/demo/flowchart.png' alt='image'/>
+<img width='600rem'   src='https://github.com/nikhil-pn/Cloud-Share/blob/main/public/images/screenshot2.png' alt='image'/>
 </div>
 
-## Watch Demo Video on Youtube 🎥<a target="_blank" href=' https://www.youtube.com/shorts/-6y7DtuBcJ4'>https://www.youtube.com/shorts/-6y7DtuBcJ4</a>
+## Watch Demo Video on Youtube 🎥<a target="_blank" href=' https://youtu.be/z0p-NCli4ao'>https://youtu.be/z0p-NCli4ao</a>
 
 <br />
 
